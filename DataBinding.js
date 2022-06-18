@@ -138,3 +138,7 @@ Property is bind to form control ngModeldirective and if you enter any text in t
 After running your application, you could see the below changes −
 
 Finally, start your application (if not done already) using the below command −
+
+
+- A notação [(ngModel)]="numero" caracteriza o Two Way Data Binding. O campo visual ao qual ela
+foi aplicada está vinculado à variável cujo nome aparece depois da atribuição. 
