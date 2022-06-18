@@ -1,0 +1,89 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<!-- <div class="container my-3 border p-3">
+  <form>
+  <div class="form-group">
+  <label for="nomeInput">Nome</label>
+  <input type="nome" class="form-control" id="nomeInput" placeholder="Digite um nome"(input)="alterarNome($event)">   <!-- vincule o método alterNome (com Event Binding)
+    ao componente de entrada de texto. Use o evento input. Note que usamos a variável implícitaevent.  -->
+  <!-- </div>
+  <button type="button" (click)="adicionar()" class="btn btn-primary btn-
+  block">Adicionar</button> (click é um event binding)-->
+  <!-- <div class="alert alert-primary mt-3 p-3">
+    {{nome}}
+  </div>
+  </form>
+  </div> -->
+
+
+   <!-- - Note que podemos usar o operador de interpolação para exibir a variável conforme ela é editada
+  pelo evento. -->
+
+<!-- 2 + 2 = {{2 + 2}}
+<p>Oi, meu nome é {{nome}} e tenho {{idade}} anos.</p>
+<p>Lançando um dado: {{lancarDado()}}</p> -->
+
+  <!-- Digamos que desejamos pegar o que o usuário digita somente no momento em que ele clica
+  no botão. Nesse caso, o primeiro passo é remover o Event Binding do campo de entrada textual
+  do template -->
+
+  <!-- <div class="container">
+    <form>
+    <div class="form-group">
+    <label for="nomeInput">Nome</label>
+    <input type="nome" class="form-control" id="nomeInput" placeholder="Digite um nome">
+    </div>
+    <button type="button" class="btn btn-primary btn-block"
+    (click)="adicionar()">Adicionar</button>
+    <div class="alert alert-primary mt-3 p-3">
+    {{nome}}
+    </div>
+    </form>
+    </div> -->
+
+
+    <!-- A seguir, vamos utilizar uma variável de referência de template. Trata-se de um nome que
+podemos associar a um elemento do template. A sintaxe usada para isso é #nomeDesejado. Uma
+vez definido um nome, o elemento pode ser referenciado por ele. Ela somente pode ser
+referenciada no próprio template, o componente não tem acesso a ela. -->
+
+
+<!-- <div class="container">
+  <form>
+  <div class="form-group">
+  <label for="nomeInput">Nome</label>
+  <input type="nome" class="form-control" id="nomeInput" placeholder="Digite um nome"
+  #nomeInput>
+  </div>
+  <button type="button" class="btn btn-primary btn-block"
+  (click)="adicionar(nomeInput)">Adicionar</button>
+  <div class="alert alert-primary mt-3 p-3" [hidden]="esconderCaixa">
+  {{nome}}
+  </div>
+  </form>
+  </div>
+ -->
+
+
+ <div class="container my-3 border p-3">
+  <div class="form-group">
+  <label for="numeroInput">Escolha um número</label>
+  <input type="numero" [(ngModel)]="numero" class="form-control" id="numeroInput"
+  placeholder="Escolha um número"
+  #nomeInput>
+  <div class="alert alert-primary mt-3 p-3 text-center">{{numero}}</div>
+  </div>
+  <button type="button" (click)="escolher()" class="btn btn-primary btn-block">Escolher para
+  mim</button>
+
+  <!-- - A notação [(ngModel)]="numero" caracteriza o Two Way Data Binding. O campo visual ao qual ela
+foi aplicada está vinculado à variável cujo nome aparece depois da atribuição. Precisamos declarar a
+variável chamada numero e o método chamado escolher. -->

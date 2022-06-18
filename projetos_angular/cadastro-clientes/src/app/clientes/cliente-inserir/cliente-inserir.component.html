@@ -1,0 +1,162 @@
+<!-- <mat-card>
+  template driven form
+  <form (submit)="onAdicionarCliente()">
+    <mat-form-field appearance="fill">
+      <mat-label>Digite o nome</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="nome"> Two way data binding -->
+      <!-- <button
+        *ngIf="nome"
+        matSuffix
+        mat-icon-button
+        (click)="nome =''">
+        <mat-icon>
+          close
+        </mat-icon>
+      </button>
+    </mat-form-field> -->
+
+
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Digite o fone</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="fone"> Two way data binding -->
+      <!-- <button
+        *ngIf="fone"
+        matSuffix
+        mat-icon-button
+        (click) = "fone=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    <mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Digite o email</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="email"> Two way data binding -->
+      <!-- <button
+        *ngIf="email"
+        matSuffix
+        mat-icon-button
+        (click) = "email=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onAdicionarCliente()">  Event binding nesse button -->
+      <!-- Inserir Cliente
+    </button>
+</form> -->
+
+<!--
+- Para acessar os dados do objeto JSON gerado pelo Angular, vamos associar uma variável de
+referência ao form e atribuir a ela a diretiva ngForm. -->
+
+<!-- <mat-card>
+  <form (submit)="onAdicionarCliente(clienteForm)" #clienteForm="ngForm">
+  <mat-form-field>
+  <input
+  required
+  minlength="4"
+  type="text"
+  matInput
+  placeholder="nome"
+  name="nome"
+  ngModel
+  />
+  </mat-form-field>
+  <mat-form-field>
+  <input
+  required
+  type="text"
+  matInput
+  placeholder="fone"
+  name="fone"
+  ngModel
+  />
+  </mat-form-field>
+  <mat-form-field>
+  <input
+  required
+  type="text"
+  matInput
+  placeholder="email"
+  name="email"
+  ngModel
+  />
+  </mat-form-field>
+  <button color="primary" mat-raised-button>
+  Inserir Cliente
+  </button>
+  </form>
+  </mat-card> -->
+
+
+
+
+
+
+
+  <!-- - A biblioteca Angular Material possui componentes apropriados para a exibição de mensagens
+  de erro. Ela se chama mat-error. Decidimos sobre a sua aparição usando uma diretiva ngIf. Para
+  acessar um elemento do form, aplicamos a ele uma variável de referência, atruibuindo a diretiva
+  ngModel a ela.
+
+
+
+SUBSTITUICAO DE TWO DAY DATA BINDING POR TEMPLATE DRIVEN FORM-->
+
+
+<mat-card>
+<form (submit)="onAdicionarCliente(clienteForm)" #clienteForm="ngForm">
+<mat-form-field>
+<input
+required
+minlength="4"
+type="text"
+matInput
+placeholder="nome"
+name="nome"
+ngModel
+#nome="ngModel"
+/>
+<mat-error *ngIf="nome.invalid">Digite um nome válido</mat-error>
+</mat-form-field>
+<mat-form-field>
+<input
+required
+type="text"
+matInput
+placeholder="fone"
+name="fone"
+ngModel
+#fone="ngModel"
+/>
+<mat-error *ngIf="fone.invalid">Digite um telefone válido</mat-error>
+</mat-form-field>
+<mat-form-field>
+<input
+required
+type="text"
+matInput
+placeholder="email"
+name="email"
+ngModel
+#email="ngModel"
+/>
+<mat-error *ngIf="email.invalid">Digite um nome válido</mat-error>
+</mat-form-field>
+<button color="primary" mat-raised-button>
+Inserir Cliente
+</button>
+</form>
+</mat-card>

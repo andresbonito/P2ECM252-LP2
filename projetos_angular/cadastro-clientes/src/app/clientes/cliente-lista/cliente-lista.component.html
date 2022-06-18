@@ -1,0 +1,39 @@
+<!-- <mat-accordion *ngIf="clientes.length > 0">
+  <mat-expansion-panel *ngFor="let cliente of clientes">
+     - A fim de exibir os elementos existentes na lista, utilizaremos a diretiva estrutura *ngFor. Cada
+elemento da lista será exibido em um mat-expansion-panel. -->
+    <!-- <mat-expansion-panel-header
+      >Nome: {{ cliente.nome }}</mat-expansion-panel-header
+    >
+    <p>Fone: {{ cliente.fone }}</p>
+    <hr />
+    <p>Email: {{ cliente.email }}</p>
+  </mat-expansion-panel>
+</mat-accordion> -->
+<!-- - Vamos garantir que a lista somente será renderizada caso exista pelo menos um cliente nela
+Além disso, caso ela esteja vazia, vamos exibir um texto informando isso. Para renderizar
+elementos de forma condicional, usamos a diretiva estrutural *ngIf. -->
+<!-- <p class="mat-body-1" style="text-align: center;" *ngIf="clientes.length <= 0">
+  Nenhum cliente cadastrado
+  </p> -->
+
+  <!-- Vamos adicionar botões que irão permitir a realização de outras operações CRUD sobre cada
+cliente da lista. O Angular Material possui um componente chamado mat-action-row apropriado
+para isso. Ele será utilizado no arquivo cliente-lista.component.html, como mostra a Listagem
+2.3.2. -->
+
+<mat-accordion *ngIf="clientes.length > 0">
+  <mat-expansion-panel *ngFor="let cliente of clientes">
+  <mat-expansion-panel-header>Nome: {{ cliente.nome }}</mat-expansion-panel-header>
+  <p>Fone: {{ cliente.fone }}</p>
+  <hr />
+  <p>Email: {{ cliente.email }}</p>
+  <mat-action-row>
+  <button mat-button color="primary">EDITAR</button>
+  <button mat-button color="warn">REMOVER</button>
+  </mat-action-row>
+  </mat-expansion-panel>
+  </mat-accordion>
+  <p class="mat-body-1" style="text-align: center;" *ngIf="clientes.length <= 0">
+  Nenhum cliente cadastrado
+  </p>

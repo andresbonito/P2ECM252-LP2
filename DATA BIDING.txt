@@ -1,0 +1,18 @@
+(Data Binding) 
+
+Interpolação: {{}} na sua classe vc define expressao, chamada de metodo ou variavel e vc quer exibir no html, 
+vc faz interpolacao,ai vc coloca uma variavel no meio e ela vai ser avaliada e exibido no html, a interpolação produz
+a representação textual da expressão
+
+Property Binding: [] vc tem um elemento html e ele tem uma propriedade q vc quer controlar se ele
+vai ser exibido ou não (estilo, hidden), ai vc vai controlar com uma variavel atraves da classe em funcao de alguma
+requisicao externa
+
+Event Binding: (  ) vc usa pra fazer o vinculo de um evento (clique no botao, foco perdido ou ganho num componente),
+vc associa a esse evento um metodo q vai ser executado, o metodo eh definido no componente e o evento acontece
+no template.
+
+Two Way Data Binding: [()] Vc tem de um lado uma variavel e de outro lado um componente visual textual, que possivelmente 
+exibe essa variavel, vc deseja que quando o componente visual for atualizado a variavel tbm seja atualizada e
+vice versa, fazendo um vinculo de dados de mao dupla entre variavel e componente visual. Atualizei a variavel vinculada
+o componente visual mostra o conteudo dela, o cliente digitou algo no componente visual e a variavel tbm eh atualizada

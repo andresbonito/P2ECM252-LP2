@@ -1,0 +1,7 @@
+/*- Também podemos criar um arquivo separado para o código CSS. Crie um arquivo chamado
+ola-angular.component.css. */
+div {
+  width: 1280px;
+  margin: auto;
+  text-align: center;
+}

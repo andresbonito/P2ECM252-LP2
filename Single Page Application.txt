@@ -1,0 +1,11 @@
+Um aplicativo de página única (em inglês "single-page application", ou SPA) 
+é uma aplicação web ou site que consiste de uma única página web com o objetivo de fornecer 
+uma experiência do usuário similar à de um aplicativo desktop. 
+Em um SPA, todo o código necessário - HTML, JavaScript, e CSS – ou é obtido com um único carregamento de página,
+[1] ou os recursos apropriados são carregados dinamicamente e adicionados à página conforme necessário, 
+geralmente em resposta a ações do usuário. A página não é recarregada em qualquer momento do processo, 
+tampouco ocorre a transferência de controle para outra página, 
+embora a URL no navegador ou a API de história do HTML5 possam ser usadas para fornecer a percepção e 
+navegabilidade de páginas separadas ao aplicativo.
+[2] Interação com aplicativos de página única muitas vezes envolve comunicação dinâmica com o servidor web 
+por trás dos bastidores. 

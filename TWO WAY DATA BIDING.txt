@@ -1,0 +1,4 @@
+ Quando utilizamos o Two Way Data Binding do Angular, vinculamos um campo visual a uma
+variável. Seu funcionamento é o seguinte: quando o valor exibido pelo componente visual é alterado, a
+variável vinculada também é alterada. Quando a variável é alterada, o valor exibido pelo componente
+visual também é alterado. É uma via de dados de mão dupla. Daí o nome. 

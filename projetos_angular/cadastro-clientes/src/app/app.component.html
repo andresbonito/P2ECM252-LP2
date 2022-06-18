@@ -1,0 +1,30 @@
+<!-- <app-cabecalho></app-cabecalho>
+<main>
+<app-cliente-inserir
+(clienteAdicionado)="onClienteAdicionado($event)"
+></app-cliente-inserir>
+Agora podemos usar o event binding no componente principal para especificar uma função
+que deve ser executada assim que esse evento (cliente adicionado) acontecer.
+<app-cliente-lista></app-cliente-lista>
+</main>
+-->
+
+
+<!-- <app-cabecalho></app-cabecalho>
+<main>
+<app-cliente-inserir
+(clienteAdicionado)="onClienteAdicionado($event)"
+></app-cliente-inserir>
+ - Agora podemos fazer o property binding abaixo-->
+<!-- <app-cliente-lista [clientes]="clientes"> </app-cliente-lista>
+</main> -->
+
+<!-- - Podemos ajustar o arquivo app.component.html removendo o event binding e o property
+binding que ele faz com os componentes que utiliza, já que não estamos mais passando clientes
+entre componentes -->
+
+<app-cabecalho></app-cabecalho>
+<main>
+<app-cliente-inserir></app-cliente-inserir>
+<app-cliente-lista></app-cliente-lista>
+</main>

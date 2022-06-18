@@ -1,0 +1,1 @@
+se estiver declarado em angular json, o conteudo tem escopo global

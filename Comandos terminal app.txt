@@ -1,0 +1,2 @@
+ng serve --port #Muda o numero da porta
+ng serve --open #Faz uma requisacao a porta local host e navegador abre a pagina (porta 4200)
